@@ -81,7 +81,17 @@ FLAW 5: A8:2013 - Cross-Site Request Forgery (CSRF)
   8. Webpage will post the data needed for resetting password without user's virification.
 * How to fix: Remove http.csrf().disable() from SecurityConfiguration.java
 
+--------------------------------------------------------------------------------------------------------------------------------
+FLAW 6: A6:2017 - Security Misconfiguration
 
++ Description: SecurityConfiguration has http.headers disabled. This results in OWASP Zap showing lot of header errors. 
++ How to fix: This can be fixed by removing http.headers().disable() (line 25) from code.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+FLAW 7: A9:2017 - Using Components with Known Vulnerabilities
+
+The application uses an old version of the spring framework (1.4.2) which can be seen from pom.xml. This can be fixed by changing 1.4.2.RELEASE to 1.5.9.RELEASE on line 16 of pom.xml file.
 
 
 
