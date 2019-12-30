@@ -13,8 +13,10 @@ You may do the project without using the starter template (in a language of your
  - java -jar target/ project1_dungho-1.0-SNAPSHOT.jar
  - Visit http://localhost:9091/ on the web browser.
 
+--------------------------------------------------------------------------------------------------------------------------------
 * Issues
-* FLAW 1: A2:2017 - Broken Authentication
+
+FLAW 1: A2:2017 - Broken Authentication
 * Description: No verification for password resetting. The attacker could get an access to user account by resetting password 
 * Step to reproduce:
   1. Run java project
@@ -25,7 +27,8 @@ You may do the project without using the starter template (in a language of your
   6. Click Submit
 * How to fix: Multi-factor authentication such as FIDO. An original password must be asked from user for verification before reset.
 
-* FLAW 2: A3: 2017 - Sensitive Data Exposure
+--------------------------------------------------------------------------------------------------------------------------------
+FLAW 2: A3: 2017 - Sensitive Data Exposure
 * Description: Re-entering person's name for the Registration form will show the address if that person already registered for the event. 
 * Step to reproduce:
   1. Run java project
@@ -37,7 +40,8 @@ You may do the project without using the starter template (in a language of your
   7. A new page will show the MOOC's address.
 * How to fix: validate user's session by adding HttpSession.validate().
 
-* FLAW 3: A5:2017 - Broken Access Control / Insecure Direct Object References
+--------------------------------------------------------------------------------------------------------------------------------
+FLAW 3: A5:2017 - Broken Access Control / Insecure Direct Object References
 * Description: A malicious user could modifies name parameter "/duplicate?name=" to view another personss address.
 * Step to reproduce:
   1. Run java project
@@ -49,7 +53,8 @@ You may do the project without using the starter template (in a language of your
   7. A message will show that MOOC already signed at his address.
 * How to fix: The parameter "name" identifies the username and it must be verified that is belong to username.
 
-* FLAW 4: A7:2017 - Cross-Site Scripting / Stored XSS Attack
+--------------------------------------------------------------------------------------------------------------------------------
+FLAW 4: A7:2017 - Cross-Site Scripting / Stored XSS Attack
 * Description: Attacker can upload malicious javascript to an unsuspecting user via the text field. 
 * Step to reproduce:
   1. Run java project 
@@ -62,7 +67,8 @@ You may do the project without using the starter template (in a language of your
   8. This will send a duplicate page as your name and browser will run the script that was stored.
 * How to fix: Validate all input without accepting characters "</>".
 
-* FLAW 5: A8:2013 - Cross-Site Request Forgery (CSRF)
+--------------------------------------------------------------------------------------------------------------------------------
+FLAW 5: A8:2013 - Cross-Site Request Forgery (CSRF)
 * Description: This application does not prevent CSRF attack so that an attacker can create a malicious webpage and redirect end user to that webpage when they are authenticated. In this situation, the issue can be identified by creating a malicious webpage using POST method for Reset Password (ZAP).
 * Step to reproduce:
   1. Run java project
