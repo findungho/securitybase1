@@ -1,4 +1,4 @@
- Security Base 2019-2020 is a course by University of Helsinki and MOOC.fi in collaboration with F-Secure.
+ Security Base 2019-2020
 
 * Project 1 description
 
@@ -61,7 +61,7 @@ FLAW 4: A7:2017 - Cross-Site Scripting / Stored XSS Attack
   2. Go to http://localhost:9091/
   3. Sign in with username "ted" and password "ted"
   4. In the form page, input your name in the Name fiel and "<script>alert('XSS')</script>" in the Address field, the click Submit.
-  5. New page will appear with the message "Thank you! You have been signed up to the event!". This stores the script as an executable that will send to a victim’s browser.
+  5. New page will appear with the message "Thank you! You have been signed up to the event!". This stores the script as an executable that will send to a victim√ïs browser.
   6. Go back http://localhost:9091/
   7. Type again your name in the Name field and anything in the Address field. 
   8. This will send a duplicate page as your name and browser will run the script that was stored.
